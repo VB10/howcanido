@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:howcanido/embed-tweet/embed_tweet_view.dart';
+
+import 'force_update/force_update.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      home: EmbedTweetView(),
+      home: ForceUpdate(),
     );
   }
 }
