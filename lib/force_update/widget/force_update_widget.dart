@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ForceUpdateDialog extends StatelessWidget {
-  // https://apps.apple.com/app/1503350537
+  //MARK: istead of this https://apps.apple.com/app/1503350537
   final appStore = 'https://apps.apple.com/tr/app/cumhuriyet/id1503350537';
   final googlePlayStore = 'market://details?id=tr.com.vbt.cumhuriyetmobileapp';
 
