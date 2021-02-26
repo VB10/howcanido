@@ -21,10 +21,10 @@ class _TurkishLessonViewState extends State<TurkishLessonView> {
     return Scaffold(
       appBar: AppBar(title: Text(stringItems.lessonTitle)),
       body: ListView.builder(
-        itemCount: lesson.lessonSubjects.length,
+        itemCount: lesson.lessonPageItems.length,
         itemBuilder: (context, index) {
           return ListTile(
-            title: Text(lesson.lessonSubjects[index]),
+            title: Text(lesson.lessonPageItems[index].title),
             onTap: () {
               _navigateDetailPage(index);
             },
@@ -37,8 +37,6 @@ class _TurkishLessonViewState extends State<TurkishLessonView> {
   //MARK: File Private  yaparak methodu baske yerlerden erismeyi kapatiyoruz
   // MARK: index degeri dokunlan itemin indexi
   void _navigateDetailPage(int index) {
-    Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => LessonDetail(lessonName: lesson.lessonSubjects[index]),
-    ));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => lesson.lessonPageItems[index].page));
   }
 }
