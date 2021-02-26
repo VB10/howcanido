@@ -1,3 +1,6 @@
+import 'package:howcanido/turkish-lesson/model/lesson_model.dart';
+import 'package:howcanido/turkish-lesson/pages/adverb_page.dart';
+
 class Lesson {
   final List<String> lessonSubjects = [
     'ANLAM BAKIMINDAN SÖZCÜKLER',
@@ -16,5 +19,15 @@ class Lesson {
     'CÜMLENİN ÖGELERİ',
     'CÜMLE BİLGİSİ',
     'ANLATIM BOZUKLUĞU',
+  ];
+
+  final List<LessonModel> lessonPageItems = [
+    // TODO: Bu sekilde hepsi eklenerek dinamik olarak basildiginda
+    // ilgi sayfalara gidilebilir
+
+    // TODO: ikinci yontem olarak navigator named var
+    // MAterial page icinde onGenerate route olarak string isimlerinden sayfaya
+    // Gidilebilir sizin icin daha rahat olacagi icin bu sekilde yaptim
+    LessonModel(page: AdverbPage(), title: "ANLAM BAKIMINDAN SÖZCÜKLER")
   ];
 }
